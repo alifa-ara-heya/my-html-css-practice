@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTML form learning</title>
+        <meta charset="UTF-8">
+        <style>
+            h2{
+                text-align: center;
+                text-decoration: underline;
+            }
+            input[type=text]{
+                width: 100%;
+                padding: 15px 10px;
+                font-size: 1rem;
+                margin: 10px 0;
+
+                box-sizing: border-box;
+                border: 3px solid salmon;
+                border-radius: 5px;
+                /*border: none;
+                border-bottom: 3px solid salmon;*/
+                background-color: beige;
+            }
+
+            input{
+                margin: 20px 0;
+            }
+
+            #search{
+                background-image: url("images/search.png");
+                background-repeat: no-repeat;
+                font-size: 1rem;
+                padding: 15px 40px;
+                background-position: 8px 12px;
+                background-color: white;
+                width: 150px;
+                transition: width 0.3s ease-in-out;
+            }
+            #search:focus{
+                background-color: aqua;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Registration Form</h2>
+
+        <form>
+            <div>
+                <input type="text" name="search" id="search" placeholder="search">
+            </div>
+
+            <div>
+                <label for="fname">First Name: </label>
+                <input type="text" name="fname" id="fname" required>
+                <label for="lname">Last Name: </label>
+                <input type="text" name="lname" id="lname" required>
+            </div>
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="email">
+            </div>
+
+            <div>
+                <label for="birthday">Birth Date: </label>
+                <input type="date" name="birthday" id="birthday">
+            </div>
+
+            <div>
+                <label for="photo">Choose your Image: </label>
+                <input type="file" name="photo" id="photo">
+            </div>
+
+            <div>
+                <label for="gender">Gender: </label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>  <!--name=gender na likhle 2 tai select kora jabe.-->
+            </div>
+
+            <div>
+                <label for="religion">Religion: </label>
+                <input type="radio" name="religion" id="muslim" value="muslim">
+                <label for="muslim">Islam</label>
+                <input type="radio" name="religion" id="hindu" value="hindu">
+                <label for="hindu">Hindu</label>
+            </div>
+
+            <div>
+                <label for="uni">Choose your favourite institution: </label>
+                <input type="checkbox" name="uni" id="cu" value="cu" checked>
+                <label for="cu">CU</label>
+                <input type="checkbox" name="du" id="du" value="du">
+                <label for="du">DU</label>
+                <input type="checkbox" name="iuc" id="iuc" value="iuc">
+                <label for="iuc">IUC</label>
+            </div>
+
+            <div>
+                <label for="department">Department: </label>
+                <select name="department" id="department">
+                    <option value="cse">CSE</option>
+                    <option value="eee">EEE</option>
+                    <option value="chemistry" selected>Chemistry</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">Message: </label><br>
+                <textarea cols="20" rows="10"></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Register/Submit"><br>
+                <input type="reset" value="Clear">
+            </div>
+
+        </form>
+    </body>
+</html>
